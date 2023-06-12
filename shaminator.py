@@ -27,6 +27,8 @@ import datetime
 # Change this to change the expiration time.
 validity_days = 365
 # Begin looping through the specified directory
+# Update to /opt/so/conf/filebeat/etc/pki to fix filebeat cert in newer deployments
+# I haven't tested it by targetting and crawling / 
 for root, dirs, files in os.walk('/etc/pki'):
     for file in files:
         # If the file is a .crt file, store it in cert_file and get ready to check to see 
